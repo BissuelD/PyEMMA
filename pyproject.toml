@@ -1,15 +1,45 @@
-[build-system]
-requires = [
- "setuptools",
- "wheel",
- "numpy>=1.10",
- "Cython>=0.22",
- "scipy",
- "mdtraj",
- "pybind11",
- "deeptime",
- ]
+[project]
+name = "pyemma"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+license = { file = "LICENSE.txt" }
+authors = [
+    {name = "Benjamin Trendelkamp-Schroer"},
+    {name = "Christoph Wehmeyer"},
+    {name = "Fabian Paul"},
+    {name = "Frank Noe"},
+    {name = "Guillermo Pé,re,z-Hernández"},
+    {name = "Martin K. Sc,he,rer"},
+    {name = "Moritz Hoffm,ann"},
+    {name = "Jan-Hendrik Prinz"},
+    {name = "Alexandra La Fleur"},
+    {name = "Antonia Mey"},
+    {name = "Ariel Rokem"},
+    {name = "Francesco Bonazzi"},
+    {name = "Ismael Rodriguez Espigares"},
+    {name = "John Chodera"},
+    {name = "Josh Fass"},
+    {name = "Stephan Doerr"},
+    {name = "@vargaslo"},
+    {name = "Simon Olsson"},
+    {name = "Brooke Husic"},
+    {name = "Tim Hempel"},
+    {name = "Sander Roet"},
+    {name = "Sebastian Falkner"},
+    {name = "Finn Krein"},
+    {name = "Wei-Tse Hsu"},
+    {name = "Côme Cattin"},
+]
 
-
-# TODO: investigate: this does not ship versioneer.py from project root.
-#build-backend = "setuptools.build_meta"
+requires-python = ">=3.9"
+dependencies = [
+    "cython>=3.0.11",
+    "deeptime>=0.4.4",
+    "mdtraj>=1.10.2",
+    "numpy>=2.0.2",
+    "pybind11>=2.13.6",
+    "scipy>=1.13.1",
+    "setuptools>=75.8.0",
+    "wheel>=0.45.1",
+]
