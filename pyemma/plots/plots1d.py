@@ -96,7 +96,7 @@ def plot_feature_histograms(xyzall,
         if not ylog:
             y = hist / hist.max()
         else:
-            y = _np.zeros_like(hist) + _np.NaN
+            y = _np.zeros_like(hist) + _np.nan
             pos_idx = hist > 0
             y[pos_idx] = _np.log(hist[pos_idx]) / _np.log(hist[pos_idx]).max()
         ax.fill_between(edges[:-1], y + h + hist_offset, y2=h + hist_offset, **kwargs)

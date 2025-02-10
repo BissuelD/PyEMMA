@@ -135,7 +135,7 @@ class TestIndexStates(unittest.TestCase):
         assert(len(res) == len(expected))
         for i in range(len(res)):
             assert(res[i].shape == expected[i].shape)
-            assert(np.alltrue(res[i] == expected[i]))
+            assert(np.all(res[i] == expected[i]))
 
     def test_onetraj_sub(self):
         dtraj =[0,1,2,3,2,1,0]
@@ -145,7 +145,7 @@ class TestIndexStates(unittest.TestCase):
         assert(len(res) == len(expected))
         for i in range(len(res)):
             assert(res[i].shape == expected[i].shape)
-            assert(np.alltrue(res[i] == expected[i]))
+            assert(np.all(res[i] == expected[i]))
 
     def test_twotraj(self):
         dtrajs = [[0,1,2,3,2,1,0], [3,4,5]]
@@ -155,7 +155,7 @@ class TestIndexStates(unittest.TestCase):
         assert(len(res) == len(expected))
         for i in range(len(res)):
             assert(res[i].shape == expected[i].shape)
-            assert(np.alltrue(res[i] == expected[i]))
+            assert(np.all(res[i] == expected[i]))
 
     def test_big(self):
         import pyemma.datasets
@@ -171,7 +171,7 @@ class TestSampleIndexes(unittest.TestCase):
         idx = dt.index_states(dtraj)
         seq = [0,1,1,1,0,0,0,0,1,1]
         sidx = dt.sample_indexes_by_sequence(idx, seq)
-        assert(np.alltrue(sidx.shape == (len(seq),2)))
+        assert(np.all(sidx.shape == (len(seq),2)))
         for t in range(sidx.shape[0]):
             assert(sidx[t,0] == 0) # did we pick the right traj?
             assert(dtraj[sidx[t,1]] == seq[t]) # did we pick the right states?

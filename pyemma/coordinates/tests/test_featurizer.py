@@ -382,8 +382,8 @@ class TestFeaturizer(unittest.TestCase):
         self.feat.add_angles(sel)
         assert (self.feat.dimension() == sel.shape[0])
         Y = self.feat.transform(self.traj)
-        assert (np.alltrue(Y >= -np.pi))
-        assert (np.alltrue(Y <= np.pi))
+        assert (np.all(Y >= -np.pi))
+        assert (np.all(Y <= np.pi))
         self.assertEqual(len(self.feat.describe()), self.feat.dimension())
 
     def test_angles_deg(self):
@@ -393,8 +393,8 @@ class TestFeaturizer(unittest.TestCase):
         self.feat.add_angles(sel, deg=True)
         assert (self.feat.dimension() == sel.shape[0])
         Y = self.feat.transform(self.traj)
-        assert (np.alltrue(Y >= -180.0))
-        assert (np.alltrue(Y <= 180.0))
+        assert (np.all(Y >= -180.0))
+        assert (np.all(Y <= 180.0))
 
     def test_angles_cossin(self):
         sel = np.array([[1, 2, 5],
@@ -404,8 +404,8 @@ class TestFeaturizer(unittest.TestCase):
         assert (self.feat.dimension() == 2 * sel.shape[0])
         Y = self.feat.transform(self.traj)
         self.assertEqual(Y.shape, (self.traj.n_frames, 2 * sel.shape[0]))
-        assert (np.alltrue(Y >= -np.pi))
-        assert (np.alltrue(Y <= np.pi))
+        assert (np.all(Y >= -np.pi))
+        assert (np.all(Y <= np.pi))
 
         desc = self.feat.describe()
         self.assertEqual(len(desc), self.feat.dimension())
@@ -417,8 +417,8 @@ class TestFeaturizer(unittest.TestCase):
         self.feat.add_dihedrals(sel)
         assert (self.feat.dimension() == sel.shape[0])
         Y = self.feat.transform(self.traj)
-        assert (np.alltrue(Y >= -np.pi))
-        assert (np.alltrue(Y <= np.pi))
+        assert (np.all(Y >= -np.pi))
+        assert (np.all(Y <= np.pi))
         self.assertEqual(len(self.feat.describe()), self.feat.dimension())
 
     def test_dihedrals_deg(self):
@@ -428,8 +428,8 @@ class TestFeaturizer(unittest.TestCase):
         self.feat.add_dihedrals(sel, deg=True)
         assert (self.feat.dimension() == sel.shape[0])
         Y = self.feat.transform(self.traj)
-        assert (np.alltrue(Y >= -180.0))
-        assert (np.alltrue(Y <= 180.0))
+        assert (np.all(Y >= -180.0))
+        assert (np.all(Y <= 180.0))
         self.assertEqual(len(self.feat.describe()), self.feat.dimension())
 
     def test_dihedrials_cossin(self):
@@ -439,8 +439,8 @@ class TestFeaturizer(unittest.TestCase):
         self.feat.add_dihedrals(sel, cossin=True)
         assert (self.feat.dimension() == 2 * sel.shape[0])
         Y = self.feat.transform(self.traj)
-        assert (np.alltrue(Y >= -np.pi))
-        assert (np.alltrue(Y <= np.pi))
+        assert (np.all(Y >= -np.pi))
+        assert (np.all(Y <= np.pi))
         desc = self.feat.describe()
         self.assertEqual(len(desc), self.feat.dimension())
 
@@ -450,8 +450,8 @@ class TestFeaturizer(unittest.TestCase):
 
         traj = mdtraj.load(self.asn_leu_pdbfile)
         Y = self.feat.transform(traj)
-        assert (np.alltrue(Y >= -np.pi))
-        assert (np.alltrue(Y <= np.pi))
+        assert (np.all(Y >= -np.pi))
+        assert (np.all(Y <= np.pi))
 
         desc = self.feat.describe()
         self.assertEqual(len(desc), self.feat.dimension())
@@ -470,8 +470,8 @@ class TestFeaturizer(unittest.TestCase):
 
         traj = mdtraj.load(self.asn_leu_pdbfile)
         Y = self.feat.transform(traj)
-        assert (np.alltrue(Y >= -180.0))
-        assert (np.alltrue(Y <= 180.0))
+        assert (np.all(Y >= -180.0))
+        assert (np.all(Y <= 180.0))
         desc = self.feat.describe()
         self.assertEqual(len(desc), self.feat.dimension())
 
@@ -482,8 +482,8 @@ class TestFeaturizer(unittest.TestCase):
         traj = mdtraj.load(self.asn_leu_traj, top=self.asn_leu_pdbfile)
         Y = self.feat.transform(traj)
         self.assertEqual(Y.shape, (len(traj), 2 * 8))  # (4 phi + 4 psi)*2 [cos, sin]
-        assert (np.alltrue(Y >= -np.pi))
-        assert (np.alltrue(Y <= np.pi))
+        assert (np.all(Y >= -np.pi))
+        assert (np.all(Y <= np.pi))
         desc = self.feat.describe()
         self.assertEqual(len(desc), self.feat.dimension(), msg=desc)
         self.assertIn("COS", desc[0])
@@ -495,8 +495,8 @@ class TestFeaturizer(unittest.TestCase):
 
         traj = mdtraj.load(self.asn_leu_pdbfile)
         Y = self.feat.transform(traj)
-        assert (np.alltrue(Y >= -np.pi))
-        assert (np.alltrue(Y <= np.pi))
+        assert (np.all(Y >= -np.pi))
+        assert (np.all(Y <= np.pi))
         desc = self.feat.describe()
         self.assertEqual(len(desc), self.feat.dimension())
 
@@ -506,8 +506,8 @@ class TestFeaturizer(unittest.TestCase):
 
         traj = mdtraj.load(self.asn_leu_pdbfile)
         Y = self.feat.transform(traj)
-        assert (np.alltrue(Y >= -np.pi))
-        assert (np.alltrue(Y <= np.pi))
+        assert (np.all(Y >= -np.pi))
+        assert (np.all(Y <= np.pi))
         desc = self.feat.describe()
         assert "COS" in desc[0]
         assert "SIN" in desc[1]
