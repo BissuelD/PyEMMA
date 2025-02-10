@@ -3,6 +3,7 @@ This project is no longer actively maintained
 =============================================
 
 An alternative package reflecting most of PyEMMA's functionality is `deeptime <https://github.com/deeptime-ml/deeptime>`__.
+The `fork <https://github.com/BissuelD/PyEMMA>`__ you are currently looking at is an attempt to make PyEMMA work by updating dependencies, patching deprecated calls and fixing bugs. It is not guaranteed to work, and we recommend using `deeptime <https://github.com/deeptime-ml/deeptime>`__.
 
 =====================================
 EMMA (Emma's Markov Model Algorithms)
