@@ -5,6 +5,23 @@ This project is no longer actively maintained
 An alternative package reflecting most of PyEMMA's functionality is `deeptime <https://github.com/deeptime-ml/deeptime>`__.
 The `fork <https://github.com/BissuelD/PyEMMA>`__ you are currently looking at is an attempt to make PyEMMA work by updating dependencies, patching deprecated calls and fixing bugs. It is not guaranteed to work, and we recommend using `deeptime <https://github.com/deeptime-ml/deeptime>`__.
 
+==============================================================
+Installation of the package and the associated MSM environment
+==============================================================
+To manage its dependencies, this project uses `uv <https://docs.astral.sh/uv/>`__.
+You can install it using::
+   pip install uv
+or by following the `official instructions <https://docs.astral.sh/uv/getting-started/installation/>`__.
+
+Then, simply run::
+   $PYTHONPAH=$(pwd) uv sync
+and activate the virutal environment with::
+   source .venv/bin/activate
+
+If you want to run the jupyter notebooks, you will need to install the jupyter kernel with::
+   $PYTHONPAH=$(pwd) uv run ipython kernel install --user --env VIRTUAL_ENV $(pwd)/.venv --name=msm
+then, just select the kernel "msm" in the jupyter notebook.
+
 =====================================
 EMMA (Emma's Markov Model Algorithms)
 =====================================
