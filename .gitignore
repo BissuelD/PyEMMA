@@ -38,3 +38,7 @@ pyemma/_ext/variational/estimators/covar_c/covartools.c
 
 # pytest
 .pytest_cache
+
+# Claire's notebook
+/notebooks/MSM_for_MD_kinetic_analysis.ipynb
+/notebooks/data
