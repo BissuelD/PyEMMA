@@ -1,45 +1,71 @@
 [project]
-name = "pyemma"
+name = "PyEMMA"
 version = "0.1.0"
-description = "Add your description here"
+description = "EMMA (Emma's Markov Model Algorithms)"
 readme = "README.md"
 license = { file = "LICENSE.txt" }
 authors = [
-    {name = "Benjamin Trendelkamp-Schroer"},
-    {name = "Christoph Wehmeyer"},
-    {name = "Fabian Paul"},
-    {name = "Frank Noe"},
-    {name = "Guillermo Pé,re,z-Hernández"},
-    {name = "Martin K. Sc,he,rer"},
-    {name = "Moritz Hoffm,ann"},
-    {name = "Jan-Hendrik Prinz"},
-    {name = "Alexandra La Fleur"},
-    {name = "Antonia Mey"},
-    {name = "Ariel Rokem"},
-    {name = "Francesco Bonazzi"},
-    {name = "Ismael Rodriguez Espigares"},
-    {name = "John Chodera"},
-    {name = "Josh Fass"},
-    {name = "Stephan Doerr"},
-    {name = "@vargaslo"},
-    {name = "Simon Olsson"},
-    {name = "Brooke Husic"},
-    {name = "Tim Hempel"},
-    {name = "Sander Roet"},
-    {name = "Sebastian Falkner"},
-    {name = "Finn Krein"},
-    {name = "Wei-Tse Hsu"},
-    {name = "Côme Cattin"},
+    { name = "Benjamin Trendelkamp-Schroer" },
+    { name = "Christoph Wehmeyer" },
+    { name = "Fabian Paul" },
+    { name = "Frank Noe" },
+    { name = "Guillermo Pé,re,z-Hernández" },
+    { name = "Martin K. Sc,he,rer" },
+    { name = "Moritz Hoffm,ann" },
+    { name = "Jan-Hendrik Prinz" },            # end of authors, start of contributors
+    { name = "Alexandra La Fleur" },
+    { name = "Antonia Mey" },
+    { name = "Ariel Rokem" },
+    { name = "Francesco Bonazzi" },
+    { name = "Ismael Rodriguez Espigares" },
+    { name = "John Chodera" },
+    { name = "Josh Fass" },
+    { name = "Stephan Doerr" },
+    { name = "@vargaslo" },
+    { name = "Simon Olsson" },
+    { name = "Brooke Husic" },
+    { name = "Tim Hempel" },
+    { name = "Sander Roet" },
+    { name = "Sebastian Falkner" },
+    { name = "Finn Krein" },
+    { name = "Wei-Tse Hsu" },
+    { name = "Côme Cattin" },
 ]
 
 requires-python = ">=3.9"
 dependencies = [
     "cython>=3.0.11",
     "deeptime>=0.4.4",
+    "matplotlib>=3.9.4",
+    "mdshare>=0.4.2",
+    "mdtraj>=1.10.2",
+    "multiprocess>=0.70.17",
+    "numpy<2.0.0",
+    "pip>=25.0",
+    "pybind11>=2.13.6",
+    "pyyaml>=6.0.2",
+    "scipy>=1.13.1",
+    "setuptools>=75.8.0",
+    "tqdm>=4.67.1",
+    "wheel>=0.45.1",
+]
+
+[build-system]
+requires = [
+    "versioneer",
+    "cython>=3.0.11",
+    "deeptime>=0.4.4",
     "mdtraj>=1.10.2",
     "numpy>=2.0.2",
+    "pip>=25.0",
     "pybind11>=2.13.6",
     "scipy>=1.13.1",
     "setuptools>=75.8.0",
     "wheel>=0.45.1",
+]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
 ]
