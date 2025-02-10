@@ -2,7 +2,7 @@
 name = "PyEMMA"
 version = "0.1.0"
 description = "EMMA (Emma's Markov Model Algorithms)"
-readme = "README.md"
+readme = "README.rst"
 license = { file = "LICENSE.txt" }
 authors = [
     { name = "Benjamin Trendelkamp-Schroer" },
