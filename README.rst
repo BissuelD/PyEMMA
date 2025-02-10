@@ -11,27 +11,19 @@ Installation of the package and the associated MSM environment
 To manage its dependencies, this project uses `uv <https://docs.astral.sh/uv/>`__.
 You can install it using::
 
-.. code-block:: bash   
-   
    pip install uv
 
 or by following the `official instructions <https://docs.astral.sh/uv/getting-started/installation/>`__.
 
 Then, simply run::
 
-.. code-block:: bash
-
    $PYTHONPATH=$(pwd) uv sync
 
 and activate the virutal environment with::
 
-.. code-block:: bash
-
    source .venv/bin/activate
 
 If you want to run the jupyter notebooks, you will need to install the jupyter kernel with::
-
-.. code-block:: bash
 
    $PYTHONPATH=$(pwd) uv run ipython kernel install --user --env VIRTUAL_ENV $(pwd)/.venv --name=msm
 
