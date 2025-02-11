@@ -34,18 +34,22 @@ authors = [
 
 requires-python = ">=3.9"
 dependencies = [
+    "anywidget>=0.9.13",
     "bokeh>=3.4.3",
     "cython>=3.0.11",
     "dask[dataframe]>=2024.8.0",
     "deeptime>=0.4.4",
+    "fuzzywuzzy>=0.18.0",
     "h5py>=3.12.1",
     "hdbscan>=0.8.40",
     "matplotlib>=3.9.4",
     "mdshare>=0.4.2",
     "mdtraj>=1.10.2",
     "multiprocess>=0.70.17",
+    "nbformat>=5.10.4",
     "numpy<2.0.0",
     "pip>=25.0",
+    "plotly>=6.0.0",
     "pybind11>=2.13.6",
     "python-mnist>=0.7",
     "pyyaml>=6.0.2",
@@ -76,4 +80,5 @@ build-backend = "setuptools.build_meta"
 [dependency-groups]
 dev = [
     "ipykernel>=6.29.5",
+    "ipywidgets==7.7.1",
 ]
