@@ -46,3 +46,4 @@ pyemma/_ext/variational/estimators/covar_c/covartools.c
 # Galaxy notebook outputs
 /notebooks/umap/*.svg
 /notebooks/umap/Galaxy10.h5
+/notebooks/umap/house_votes
