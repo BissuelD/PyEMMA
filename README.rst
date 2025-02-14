@@ -15,15 +15,20 @@ You can install it using::
 
 or by following the `official instructions <https://docs.astral.sh/uv/getting-started/installation/>`__.
 
-Then, simply run::
+Among other things, uv eases the creation of a virtual environment matching with the project's requirements.
+To create the virtual environment, you can run::
 
-   PYTHONPATH=$(pwd) uv sync
+   uv venv
 
 and activate the virutal environment with::
 
    source .venv/bin/activate
 
-If you want to run the jupyter notebooks, you will need to install the jupyter kernel with::
+Then, you can install all the dependencies by simply running::
+
+   PYTHONPATH=$(pwd) uv sync
+
+If you want to use the jupyter notebooks, you will need to install the jupyter kernel with::
 
    PYTHONPATH=$(pwd) uv run ipython kernel install --user --env VIRTUAL_ENV $(pwd)/.venv --name=msm
 
