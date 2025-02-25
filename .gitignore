@@ -41,7 +41,7 @@ pyemma/_ext/variational/estimators/covar_c/covartools.c
 
 # Claire's notebook
 # /notebooks/MSM_for_MD_kinetic_analysis.ipynb
-/notebooks/data
+/notebooks/msm-course/*/data
 
 # Galaxy notebook outputs
 /notebooks/umap/*.svg
