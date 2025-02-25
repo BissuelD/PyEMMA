@@ -40,8 +40,8 @@ pyemma/_ext/variational/estimators/covar_c/covartools.c
 .pytest_cache
 
 # Claire's notebook
-# /notebooks/**/data
-# /notebooks/**/Figures
+/notebooks/**/data
+/notebooks/**/Figures
 
 # Galaxy notebook outputs
 /notebooks/umap/*.svg
