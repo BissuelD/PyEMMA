@@ -9,7 +9,7 @@ The `fork <https://github.com/BissuelD/PyEMMA>`__ you are currently looking at i
 Installation of the package and the associated MSM environment
 ==============================================================
 To manage its dependencies, this project uses `uv <https://docs.astral.sh/uv/>`__.
-You can install it using::
+You can install this using::
 
    pip install uv
 
